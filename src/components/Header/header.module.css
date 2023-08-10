@@ -1,0 +1,44 @@
+.menu {
+    width: 580px;
+    margin: 0;
+}
+
+.menu > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.menu > ul > li {
+    color: white;
+}
+
+.navigation {
+    width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.announcement {
+    color: white;
+}
+.heart {
+
+}
+
+.message {
+
+}
+
+.account {
+    display: flex;
+    align-items: center;
+}
+
+.account > p {
+    margin: 0;
+    padding-left: 10px;
+    color: white;
+}
