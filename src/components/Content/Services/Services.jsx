@@ -5,14 +5,14 @@ import styles from './../content.module.css';
 export const Services = (props) => {
   return (
     <div className={styles.services_container}>
-      <div>Авто</div>
-      <div>Работа</div>
-      <div>Запчасти</div>
-      <div>Товары для детей</div>
-      <div>Недвижимость</div>
-      <div>Услуги</div>
-      <div>Животные</div>
-      <div>Красота и здоровье</div>
+      <div><span>Авто</span></div>
+      <div><span>Работа</span></div>
+      <div><span>Запчасти</span></div>
+      <div><span>Товары для детей</span></div>
+      <div><span>Недвижимость</span></div>
+      <div><span>Услуги</span></div>
+      <div><span>Животные</span></div>
+      <div><span>Красота и здоровье</span></div>
     </div>
   )
 }

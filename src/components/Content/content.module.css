@@ -37,7 +37,7 @@
 }
 
 .services_container {
-    width: 900px;
+    width: 810px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -45,19 +45,28 @@
 }
 
 .services_container > div {
-  background-color: #011765;
-    padding: 17px;
+    background-color: #011765;
     text-align: center;
-    width: 200px;
-    flex-wrap: wrap;
+    width: 190px;
     margin: 10px 0 0 0;
     color: #ffff;
-    font-size: 20px;
     border-radius: 17px;
+}
+
+.services_container > div > span {
+    display: block;
+    font-size: 20px;
+    padding: 10px 10px;
+    white-space: pre-line;
 }
 
 .services_container > div:hover {
     background-color: #5b5656;
     transition: 0.3s;
     cursor: pointer;
+}
+
+.recomendation_container {
+    width: 1320px;
+    margin: 100px auto 0 auto;
 }
