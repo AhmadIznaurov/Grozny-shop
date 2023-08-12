@@ -7,7 +7,6 @@ export const App = () => {
     <div className="App">
       <Header />
       <GroznyShop />
-
     </div>
   );
 }
