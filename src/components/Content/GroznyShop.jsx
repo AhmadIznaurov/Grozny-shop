@@ -12,8 +12,8 @@ export const GroznyShop = (props) => {
       <Logo />
       <Search />
     </div>
-      <Services />
-     <Recomendation />
+     {/* <Services />*/}
+     {/*<Recomendation />*/}
     </>
 
   )

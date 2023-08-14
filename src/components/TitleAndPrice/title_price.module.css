@@ -1,0 +1,6 @@
+.title_price_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1150px;
+    letter-spacing: 2px;
+}

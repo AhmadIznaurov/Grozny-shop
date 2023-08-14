@@ -3,7 +3,7 @@ import heart from '../../assets/heart-header.svg';
 import message from '../../assets/message-header.svg';
 import account from '../../assets/account-header.svg';
 import styles from './header.module.css'
-import { Button } from '../Button'
+import { Button } from '../Button/Button'
 
 export const Navigation = () => {
   return (
