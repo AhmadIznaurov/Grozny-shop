@@ -6,21 +6,29 @@ const StyledButton = styled.button`
  background-color: #011765;
  width: ${props => props.width}; 
   border-radius: 10px;
-  padding: 10px;
-  text-align: center;
+  padding: ${props => props.padding || '10px'};
+  text-align: ${props => props.align || 'center'};
   border: none;
   color: ${props => props.color};
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: ${props => props.fontSize};
 `
 
 export const Button = (props) => {
   return (
    <StyledButton {...props}>
-     {props.text}
+     <img src={props.icon} alt=""/>
+     <span className='text-button'>
+       {props.text}
+     </span>
      </StyledButton>
   )
 }
 
 Button.propTypes = {
-  text: propTypes.string
+  text: propTypes.string.isRequired,
+  icon: propTypes.string
 }
