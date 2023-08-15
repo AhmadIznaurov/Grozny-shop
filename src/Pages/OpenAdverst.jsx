@@ -6,7 +6,7 @@ import { Slider } from '../components/Slider'
 import { Button } from '../components/Button/Button'
 import { InfoOfBuilding } from '../components/InfoOfBuilding'
 import { Location } from '../components/Location'
-import { Description } from '../components/Deskcription'
+import { Description } from '../components/Description'
 import { HomeInfo } from '../components/HomeInfo'
 import { Footer } from '../components/Footer'
 
