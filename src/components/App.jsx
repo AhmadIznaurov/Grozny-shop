@@ -1,19 +1,23 @@
+import React from 'react'
 import { Header } from './Header/Header'
 import { GroznyShop } from './Content/GroznyShop'
 import { OpenAdverst } from '../Pages/OpenAdverst'
-import { Slider } from './Slider'
+import { Logo } from './Content/Logo/Logo'
+import { Search } from './Content/Search/Search'
+import { Message } from '../Pages/Message'
+
 
 
 export const App = () => {
   return (
-    <div className="App">
+    <>
       <Header />
       <div className='container'>
         <GroznyShop />
-        <OpenAdverst />
+        {/*<OpenAdverst />*/}
+        <Message />
       </div>
-
-    </div>
-  );
+    </>
+  )
 }
 
