@@ -4,6 +4,7 @@ import message from '../../assets/message-header.svg';
 import account from '../../assets/account-header.svg';
 import styles from './header.module.css'
 import { Button } from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 export const Navigation = () => {
   return (
@@ -12,7 +13,9 @@ export const Navigation = () => {
         <img src={heart} alt="heart"/>
       </div>
       <div className={styles.message}>
-        <img src={message} alt="message"/>
+        <Link to='/message'>
+          <img src={message} alt="message"/>
+        </Link>
       </div>
       <div className={styles.announcement}>
         Мои объявления

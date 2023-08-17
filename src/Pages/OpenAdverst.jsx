@@ -8,12 +8,12 @@ import { InfoOfBuilding } from '../components/InfoOfBuilding'
 import { Location } from '../components/Location'
 import { Description } from '../components/Description'
 import { HomeInfo } from '../components/HomeInfo'
-import { Footer } from '../components/Footer'
+
 
 
 export const OpenAdverst = () => {
   return (
-    <div>
+    <div className='container-3'>
       <Breadcrumbs />
       <TitleAndPrice />
      <AdverstButtons />
@@ -33,7 +33,6 @@ export const OpenAdverst = () => {
       <Location />
       <Description />
       <HomeInfo />
-      <Footer />
     </div>
   )
 }
