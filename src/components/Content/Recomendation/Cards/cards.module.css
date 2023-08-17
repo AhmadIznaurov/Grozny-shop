@@ -11,6 +11,11 @@
     margin-bottom: 20px;
 }
 
+.card_body > a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card_img > img {
     display: block;
     width: 100%;
