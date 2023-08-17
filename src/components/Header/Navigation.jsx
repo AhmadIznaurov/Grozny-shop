@@ -18,7 +18,9 @@ export const Navigation = () => {
         </Link>
       </div>
       <div className={styles.announcement}>
-        Мои объявления
+        <Link to='/my/advertisement'>
+          Мои объявления
+        </Link>
       </div>
       <div className={styles.account}>
         <div>

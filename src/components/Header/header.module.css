@@ -25,15 +25,9 @@
     text-decoration: none;
 }
 
-.announcement {
+.announcement > a{
     color: white;
-}
-.heart {
-
-}
-
-.message {
-
+    text-decoration: none;
 }
 
 .account {
