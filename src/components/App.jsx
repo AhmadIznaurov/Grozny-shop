@@ -5,6 +5,7 @@ import { Message } from '../Pages/Message'
 import {Routes, Route} from 'react-router-dom';
 import { Layout } from './Layout'
 import { AddAdvertisement } from '../Pages/AddAdvertisement'
+import { MyAdversitement } from '../Pages/MyAdversitement'
 
 
 export const App = () => {
@@ -16,6 +17,7 @@ export const App = () => {
             <Route path='/advertisement' element={ <OpenAdverst />} />
             <Route path='/message' element={<Message />} />
             <Route path='/add/advertisement' element={<AddAdvertisement />}/>
+            <Route path='/my/advertisement' element={<MyAdversitement />}/>
         </Route>
     </Routes>
 </>
