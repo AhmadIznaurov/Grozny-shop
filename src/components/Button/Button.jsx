@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import propTypes from 'prop-types'
 
 const StyledButton = styled.button`
- background-color: #011765;
- width: ${props => props.width}; 
+  background-color: #011765;
+  width: ${props => props.width}; 
   border-radius: 10px;
   padding: ${props => props.padding || '10px'};
   text-align: ${props => props.align || 'center'};

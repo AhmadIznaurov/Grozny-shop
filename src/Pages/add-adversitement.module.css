@@ -1,0 +1,42 @@
+.title_adversitement > span{
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.photo_adversitement > span{
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.description_adversitement > span {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.description_adversitement > textarea {
+    width: 700px;
+    height: 220px;
+    resize: none;
+}
+
+.price_adversitement > span {
+    display: block;
+    padding-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.button_adversitement {
+    width: 750px;
+    margin: 100px auto;
+}
+

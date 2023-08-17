@@ -26,7 +26,9 @@ export const Navigation = () => {
         </div>
          <p>GrozMarket</p>
       </div>
-      <Button color={'white'} text={'Разместить объявление'} width={205}/>
+      <Link to='/add/advertisement'>
+        <Button color={'white'} text={'Разместить объявление'} width={205} />
+      </Link>
     </div>
   )
 }
