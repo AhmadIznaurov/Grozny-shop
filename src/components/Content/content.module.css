@@ -19,23 +19,6 @@
     width: 80%;
 }
 
-.input_search > input {
-    width: 800px;
-    padding: 8px;
-    border-radius: 8px;
-    border: 0.5px solid gray;
-    color: white;
-    background-color: #9b9494;
-    font-weight: bold;
-}
-.input_search > input::-webkit-input-placeholder{
-    color: white;
-}
-
-.input_search > input:focus{
-    outline: none;
-}
-
 .services_container {
     width: 810px;
     display: flex;
