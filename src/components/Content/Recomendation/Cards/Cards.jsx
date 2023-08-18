@@ -8,7 +8,7 @@ export  const Cards = (props) => {
   return (
     <div className={styles.cards_container}>
       {
-        cards.map((card) => <Card card={card}/>
+        cards.map((card, index) => <Card card={card} key={index}/>
         )}
     </div>
   )
