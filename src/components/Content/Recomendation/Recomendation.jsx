@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './../content.module.css';
 import { Cards } from './Cards/Cards'
 
+
 export const Recomendation  = (props) => {
   return (
     <div className={styles.recomendation_container}>

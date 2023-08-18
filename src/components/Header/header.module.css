@@ -33,10 +33,29 @@
 .account {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
-.account > p {
+.account > .p {
     margin: 0;
     padding-left: 10px;
     color: white;
+    cursor: pointer;
 }
+
+/*.dropdown {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+
+.dropdown_content {
+    /*display: none;*/
+    position: absolute;
+    top: 50px;
+    left: -60px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*.dropdown:hover .dropdown_content {display: block;}*/
