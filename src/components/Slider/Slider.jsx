@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -8,7 +8,7 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 
 
 
-export const Slider = () => {
+export const Slider = ({item}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -25,7 +25,7 @@ export const Slider = () => {
         className="mySwiper2"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src={item.largeImage} />
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
@@ -65,7 +65,7 @@ export const Slider = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <img src={item.largeImage} />
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-2.jpg" />

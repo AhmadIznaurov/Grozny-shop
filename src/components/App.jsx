@@ -8,6 +8,9 @@ import { AddAdvertisement } from '../Pages/AddAdvertisement'
 import { MyAdversitement } from '../Pages/MyAdversitement'
 import { useDispatch } from 'react-redux'
 import { loadCards } from '../redux/homeAdvertisementReducer/action'
+import { loadAddress, loadDesc, loadLargeImage, loadPhone, loadTitle } from '../redux/openAdvertisement/action'
+
+
 
 
 export const App = () => {
@@ -15,8 +18,15 @@ export const App = () => {
   const dispatch = useDispatch();
 
 
+
   useEffect(() => {
-    dispatch(loadCards())
+    dispatch(loadCards());
+    dispatch(loadDesc());
+    dispatch(loadLargeImage())
+    dispatch(loadAddress())
+    dispatch(loadPhone())
+    dispatch(loadTitle())
+
   }, [])
 
   return (
@@ -24,7 +34,7 @@ export const App = () => {
     <Routes>
       <Route path='/' element={<Layout/>}>
       <Route path='/' element={<GroznyShop />} />
-            <Route path='/advertisement' element={ <OpenAdverst />} />
+            <Route path='/advertisement/:id?' element={ <OpenAdverst />} />
             <Route path='/message' element={<Message />} />
             <Route path='/add/advertisement' element={<AddAdvertisement />}/>
             <Route path='/my/advertisement' element={<MyAdversitement />}/>
@@ -33,4 +43,3 @@ export const App = () => {
 </>
   )
 }
-

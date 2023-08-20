@@ -5,6 +5,8 @@ import { AdvertisementReducer } from './homeAdvertisementReducer/advertisement'
 import { openAdvertisementReducer } from './openAdvertisement/openAdvertisement'
 
 
+
+
 const logger = createLogger({
   diff: true,
   collapsed: true
@@ -12,7 +14,7 @@ const logger = createLogger({
 
 const rootReducer = combineReducers({
   cards: AdvertisementReducer,
-  OpenCards: openAdvertisementReducer
+  openCards: openAdvertisementReducer,
 })
 
 export const store = createStore(rootReducer, applyMiddleware(thunk, logger))
