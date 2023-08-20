@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Description = (props) => {
+export const Description = ({ item }) => {
   return (
     <div style={{marginTop: '100px'}}>
-      <h2>Описание</h2>
+      <h2>{item.desc}</h2>
  <div className="description">
 <p>ОБЪЯВЛЕНИЕ ОТ ЗАСТРОЙЩИКА ООО "ИНВЕСТ-СТРОЙ"С 1-ГО ИЮЛЯ ПОВЫШЕНИЕ СТОИМОСТИ ЗА КВАДРАТ
   Продается двухкомнатная квартира c видом на центр в новостройке европейского качества по Шейха Али Митаева.

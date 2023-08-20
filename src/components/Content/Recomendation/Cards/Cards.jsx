@@ -1,14 +1,18 @@
 import React from 'react';
 import { Card } from './Card'
 import styles from './cards.module.css';
-import {cards} from  './mock'
+import { useSelector } from 'react-redux'
+
 
 export  const Cards = (props) => {
+
+  const cards = useSelector((state) => state.cards.cards)
 
   return (
     <div className={styles.cards_container}>
       {
-        cards.map((card, index) => <Card card={card} key={index}/>
+        cards.map((card) =>
+             <Card card={card} key={card.id}/>
         )}
     </div>
   )
