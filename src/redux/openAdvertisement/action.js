@@ -1,7 +1,7 @@
 export const loadLargeImage = () => {
   return (dispatch) => {
     dispatch({type: 'load/image/start'})
-    fetch('http://localhost:8080/largeImage')
+    fetch('http://localhost:8080/sliderImage')
       .then((response) => response.json())
       .then((data) => {
         dispatch({

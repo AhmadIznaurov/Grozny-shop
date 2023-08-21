@@ -4,13 +4,12 @@ import { TitleAndPrice } from '../components/TitleAndPrice'
 import { AdverstButtons } from '../components/AdverstButtons'
 import { Slider } from '../components/Slider'
 import { Button } from '../components/Button/Button'
-import { InfoOfBuilding } from '../components/InfoOfBuilding'
 import { Location } from '../components/Location'
 import { Description } from '../components/Description'
-import { HomeInfo } from '../components/HomeInfo'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { add } from 'nodemon/lib/rules'
+import { HomeInfo } from '../components/HomeInfo'
+import { InfoOfBuilding } from '../components/InfoOfBuilding'
 
 
 
@@ -22,11 +21,7 @@ export const OpenAdverst = () => {
   const image = useSelector((state) => state.openCards.image)
   const phone = useSelector((state) => state.openCards.phone)
   const title = useSelector((state) => state.openCards.title)
-  const filteredDesc = desc.filter((elem) => elem.advertisementId === id)
-  const filteredImage = image.filter((elem) => elem.id === id)
-  const filteredAddress = address.filter((elem) => elem.id === id)
-  const filteredPhone = phone.filter((elem) => elem.id === id)
-  const filteredTitle = title.filter((elem) => elem.id === id)
+
 
 
 
@@ -34,7 +29,7 @@ export const OpenAdverst = () => {
     <div className='container-3'>
               <Breadcrumbs />
       {
-        filteredTitle.map((item) =>   <TitleAndPrice item={item} />)
+        title.filter((elem) => elem.id === id).map((item) =>   <TitleAndPrice item={item} />)
       }
 
               <AdverstButtons />
@@ -42,13 +37,14 @@ export const OpenAdverst = () => {
               <div className='sliders_and_buttons'>
                 <div className='sliders_left'>
                   {
-                    filteredImage.map((item) =>  <Slider item={item} />)
+                    image.filter((elem) => elem.id === id).map((item) =>  <Slider item={item} />)
                   }
                 </div>
 
                 <div className='buttons_right'>
                   {
-                    filteredPhone.map((item) => <Button text={item.phone} color='white' width='330px' padding='20px' fontSize='25px'/>)
+                    phone.filter((elem) => elem.id === id).map((item) =>
+                      <Button text={item.phone} color='white' width='330px' padding='20px' fontSize='25px'/>)
                   }
                   <br/>
                   <br/>
@@ -56,11 +52,14 @@ export const OpenAdverst = () => {
                 </div>
               </div>
       {
-        filteredAddress.map((item) => <Location item={item}/>)
+        address.filter((elem) => elem.id === id).map((item) => <Location item={item}/>)
       }
       {
-        filteredDesc.map((item) => <Description item={item}/>)
+        desc.filter((elem) => elem.advertisementId === id).map((item) => <Description item={item}/>)
       }
+
+      {/*<HomeInfo />*/}
+      {/*<InfoOfBuilding />*/}
     </div>
   )
 }
