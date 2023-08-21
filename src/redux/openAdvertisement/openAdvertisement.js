@@ -21,7 +21,7 @@ export const openAdvertisementReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        OpenCards: action.payload
+        image: action.payload
       }
 
     case 'load/desc/start':
@@ -34,7 +34,7 @@ export const openAdvertisementReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        OpenCards: action.payload
+        desc: action.payload
       }
 
     case 'load/address/start':
@@ -47,7 +47,7 @@ export const openAdvertisementReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        OpenCards: action.payload
+        address: action.payload
       }
 
     case 'load/phone/start':
@@ -60,7 +60,7 @@ export const openAdvertisementReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        OpenCards: action.payload
+        phone: action.payload
       }
 
     case 'load/title/start':
@@ -73,7 +73,7 @@ export const openAdvertisementReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        OpenCards: action.payload
+        title: action.payload
       }
     default:
       return state;
