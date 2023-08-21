@@ -47,7 +47,7 @@ export const loadDesc = () => {
       .then((response) => response.json())
       .then((data) => {
         dispatch({
-          type: 'load/desk/success',
+          type: 'load/desc/success',
           payload: data
         })
       })
@@ -62,6 +62,20 @@ export const loadTitle = () => {
       .then((data) => {
         dispatch({
           type: 'load/title/success',
+          payload: data
+        })
+      })
+  }
+}
+
+export const loadPrice = () => {
+  return (dispatch) => {
+    dispatch({type: 'load/price/start'})
+    fetch('http://localhost:8080/price')
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch({
+          type: 'load/price/success',
           payload: data
         })
       })

@@ -8,7 +8,14 @@ import { AddAdvertisement } from '../Pages/AddAdvertisement'
 import { MyAdversitement } from '../Pages/MyAdversitement'
 import { useDispatch } from 'react-redux'
 import { loadCards } from '../redux/homeAdvertisementReducer/action'
-import { loadAddress, loadDesc, loadLargeImage, loadPhone, loadTitle } from '../redux/openAdvertisement/action'
+import {
+  loadAddress,
+  loadDesc,
+  loadLargeImage,
+  loadPhone,
+  loadPrice,
+  loadTitle
+} from '../redux/openAdvertisement/action'
 
 
 
@@ -26,6 +33,7 @@ export const App = () => {
     dispatch(loadAddress())
     dispatch(loadPhone())
     dispatch(loadTitle())
+    dispatch(loadPrice())
 
   }, [])
 
@@ -43,3 +51,5 @@ export const App = () => {
 </>
   )
 }
+
+

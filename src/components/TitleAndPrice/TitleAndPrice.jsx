@@ -10,7 +10,7 @@ export const TitleAndPrice = ({item}) => {
        <h1>{item.title}</h1>
       </div>
       <div className='price'>
-        <p></p>
+        <p>{item.price}</p>
       </div>
     </div>
   )

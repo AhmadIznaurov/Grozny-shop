@@ -4,6 +4,7 @@ const initialState = {
   address: [],
   phone: [],
   title: [],
+  price: [],
   loading: false,
 }
 
@@ -74,6 +75,19 @@ export const openAdvertisementReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         title: action.payload
+      }
+
+    case 'load/price/start':
+      return {
+        ...state,
+        loading: true
+      }
+
+    case 'load/price/success':
+      return {
+        ...state,
+        loading: false,
+        price: action.payload
       }
     default:
       return state;
