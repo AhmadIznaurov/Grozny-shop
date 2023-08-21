@@ -8,8 +8,7 @@ import { Location } from '../components/Location'
 import { Description } from '../components/Description'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { HomeInfo } from '../components/HomeInfo'
-import { InfoOfBuilding } from '../components/InfoOfBuilding'
+
 
 
 
