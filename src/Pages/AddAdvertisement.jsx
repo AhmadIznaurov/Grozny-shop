@@ -1,24 +1,49 @@
-import React from 'react'
-import { Input } from '../components/Input/Input';
+import React, { useState } from 'react'
 import styles from './add-adversitement.module.css';
 import { Button } from '../components/Button/Button'
+import { useDispatch } from 'react-redux'
+import { SendDate } from '../redux/SendDateReducer/action'
 
 
 export const AddAdvertisement = (props) => {
+
+  const [nameOfAdvertisement, setNameOfAdvertisement] = useState('');
+  const [image, setImage] = useState('');
+  const [desc, setDesc] = useState('');
+  const [price, setPrice] = useState('');
+  const dispatch = useDispatch()
+
+  const handleClick = () => {
+    dispatch(SendDate(nameOfAdvertisement, image, desc, price))
+  }
+
   return (
     <div className='container-3'>
      <h1>Разместить объявление</h1>
       <div className={styles.title_adversitement}>
         <span>Название объявления</span>
-        <Input placeholder='Название объявления...' width='700px'/>
+        <input
+          placeholder='Название объявления...'
+          type='text'
+          value={nameOfAdvertisement}
+          onChange={(e) => setNameOfAdvertisement(e.target.value)}
+        />
       </div>
       <div className={styles.photo_adversitement}>
         <span>Картинка объявления</span>
-        <Input placeholder='Картинка объявления...' width='700px'/>
+        <input
+          placeholder='Картинка объявления...'
+          type='text'
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
       </div>
       <div className={styles.description_adversitement}>
         <span>Описание</span>
-        <textarea />
+        <textarea
+          value={desc}
+          onChange={(e) => setDesc(e.target.value)}
+        />
       </div>
       <div className={styles.price_adversitement}>
         <span>Цена</span>
@@ -34,11 +59,21 @@ export const AddAdvertisement = (props) => {
         </select>
 
         <p>Введите свою цену</p>
-        <Input placeholder='Сумма' type='number' width='700px'/>
+        <input
+          placeholder='Введите вашу цену...'
+          type='text'
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
       </div>
 
       <div className={styles.button_adversitement}>
-        <Button text='Отправить' color='white' width='200px'/>
+        <Button
+          text='Отправить'
+          color='white'
+          width='200px'
+          onSubmit={handleClick}
+        />
       </div>
     </div>
   )

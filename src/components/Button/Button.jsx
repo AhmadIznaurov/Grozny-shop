@@ -19,7 +19,7 @@ const StyledButton = styled.button`
 
 export const Button = (props) => {
   return (
-   <StyledButton {...props}>
+   <StyledButton {...props} onClick={props.onSubmit}>
      <img src={props.icon} alt=""/>
      <span className='text-button'>
        {props.text}
@@ -30,5 +30,6 @@ export const Button = (props) => {
 
 Button.propTypes = {
   text: propTypes.string.isRequired,
-  icon: propTypes.string
+  icon: propTypes.string,
+  onSubmit: propTypes.func
 }

@@ -22,7 +22,6 @@
 }
 
 .description_adversitement > textarea {
-    width: 700px;
     height: 220px;
     resize: none;
 }
@@ -40,3 +39,30 @@
     margin: 100px auto;
 }
 
+.title_adversitement > input,
+.photo_adversitement > input,
+.description_adversitement > textarea,
+.price_adversitement > input
+{
+    width: 700px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0.5px solid gray;
+    color: white;
+    background-color: #9b9494;
+    font-weight: bold;
+}
+
+.title_adversitement > input::-webkit-input-placeholder,
+.photo_adversitement > input::-webkit-input-placeholder,
+.price_adversitement > input::-webkit-input-placeholder {
+    color: white;
+}
+
+.title_adversitement > input:focus,
+.photo_adversitement > input:focus,
+.description_adversitement > textarea:focus,
+.price_adversitement > input:focus
+{
+    outline: none;
+}

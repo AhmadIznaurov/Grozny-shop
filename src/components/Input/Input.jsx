@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { AddAdvertisement } from '../../Pages/AddAdvertisement'
 
 
 const StyledInput = styled.input`
@@ -22,9 +23,14 @@ const StyledInput = styled.input`
 
 
 export const Input = (props) => {
+  console.log(props.value)
   return (
     <div>
-      <StyledInput type="text" placeholder={props.placeholder} {...props} />
+      <StyledInput
+        type="text"
+        placeholder={props.placeholder}
+        {...props}
+      />
     </div>
   )
 }
