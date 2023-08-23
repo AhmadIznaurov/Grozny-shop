@@ -6,7 +6,9 @@ import { MenuRaiting } from './MenuRaiting'
 
 
 
+
 export const Menu = (props) => {
+
   return (
     <div className={styles.menu}>
        <MenuLogo />
