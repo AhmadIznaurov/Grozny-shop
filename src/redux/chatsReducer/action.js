@@ -1,24 +1,12 @@
-export const SendDate = (nameOfAdvertisement, image, desc, price) => {
+export const chats = () => {
   return (dispatch) => {
-    dispatch({type: 'send/data/start'})
+    dispatch({type: 'load/chats/start'})
 
-    fetch('http://localhost:8080/advertisement', {
-      method: 'POST',
-      headers: {
-        "Content-Type":  "application/json",
-      },
-      body: JSON.stringify({
-        title: nameOfAdvertisement,
-        price: price,
-        image: image,
-        date: 'Сегодня в 20:30',
-        location: 'Грозный'
-      })
-    })
+    fetch('http://localhost:8080/chats')
       .then((response) => response.json())
       .then((data) => {
         dispatch({
-          type: 'send/data/success',
+          type: 'load/chats/success',
           payload: data
         })
       })

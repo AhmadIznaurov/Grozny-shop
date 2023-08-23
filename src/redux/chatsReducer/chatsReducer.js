@@ -1,22 +1,22 @@
 const initialState = {
-  sendDate: [],
+  chats: [],
   loading: false,
 }
 
-export const sendDataReducer = (state = initialState, action) => {
+export const chatsReducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case 'send/data/start':
+    case 'load/chats/start':
       return {
         ...state,
         loading: true
       }
 
-    case 'send/data/success':
+    case 'load/chats/success':
       return {
         ...state,
         loading: false,
-        sendDate: action.payload
+        chats: action.payload
       }
 
     default:
