@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import heart from '../../assets/heart-header.svg';
 import message from '../../assets/message-header.svg';
-import account from '../../assets/account-header.svg';
+import account from '../../assets/Grozny-shop_round.png';
 import styles from './header.module.css'
 import { Button } from '../Button/Button'
 import { Link } from 'react-router-dom'
@@ -26,12 +26,12 @@ export const Navigation = () => {
           Мои объявления
         </Link>
       </div>
-      <div className={styles.account}>
-        <div>
+      <div className={styles.account} ref={ref} onClick={() => setIsShow(!isShow)}>
+        <div className={styles.grozny_round}>
           <img src={account} alt="account"/>
         </div>
         {/*<div className={styles.dropdown}>*/}
-          <p className={styles.p} ref={ref} onClick={() => setIsShow(!isShow)}>GrozMarket</p>
+          <p className={styles.p}>GrozMarket</p>
           {
             isShow ? (
               <div className={styles.dropdown_content} >

@@ -3,7 +3,7 @@ import styles from '../../Pages/Message.module.css';
 import { MenuLogo } from './MenuLogo'
 import { MenuTitle } from './MenuTitle'
 import { MenuRaiting } from './MenuRaiting'
-import { Button } from '../Button/Button'
+
 
 
 export const Menu = (props) => {
