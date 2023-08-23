@@ -52,5 +52,3 @@ export const App = () => {
   )
 }
 
-
-// Time video is 1:02:05 - 2:56:40
