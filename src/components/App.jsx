@@ -16,6 +16,7 @@ import {
   loadPrice,
   loadTitle
 } from '../redux/openAdvertisement/action'
+import { chats } from '../redux/chatsReducer/action'
 
 
 
@@ -34,7 +35,7 @@ export const App = () => {
     dispatch(loadPhone())
     dispatch(loadTitle())
     dispatch(loadPrice())
-
+    dispatch(chats())
   }, [])
 
   return (
@@ -51,4 +52,5 @@ export const App = () => {
 </>
   )
 }
+
 

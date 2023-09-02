@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from '../../Pages/Message.module.css';
-import {Chats_item} from './Chats-mock';
 import { Chat } from './Chat'
+import { useSelector } from 'react-redux'
 
 export const Chats = (props) => {
+  const chats = useSelector((state) => state.chats.chats)
   return (
     <>
-      {Chats_item.map((chat) => <Chat chat={chat}/>)}
+      {chats.map((chat) => <Chat chat={chat}/>)}
     </>
   )
 }

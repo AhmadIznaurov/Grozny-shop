@@ -4,6 +4,8 @@ import { MessagesButton } from './MessagesButton'
 import { Chats } from '../Chats'
 
 export const Messages = (props) => {
+
+
   return (
     <div className={styles.messages}>
    <span>Сообщения</span>

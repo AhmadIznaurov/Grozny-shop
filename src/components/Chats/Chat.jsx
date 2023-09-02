@@ -13,7 +13,7 @@ export const Chat = ({ chat }) => {
           <p>{chat.userName}</p>
         </div>
         <div className={styles.title_ad}>
-          <p>{chat.titleAd}</p>
+          <p>{chat.nameOfAdvertisement}</p>
         </div>
         <div className={styles.message_user}>
           <p>{chat.message}</p>
