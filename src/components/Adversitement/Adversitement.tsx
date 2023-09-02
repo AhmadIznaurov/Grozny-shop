@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Adversitement.module.css';
 import avertImage from '../../assets/Lincode_courses.png'
 
-export const Adversitement: React.FC = (props) => {
+export const Adversitement: React.FC = () => {
   return (
     <div className={styles.adversitement}>
       <h1>Мои объявления</h1>

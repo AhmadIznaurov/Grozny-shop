@@ -1,4 +1,6 @@
-export const loadCards = () => {
+import React from "react";
+
+export const loadCards: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/cards/start'})
 

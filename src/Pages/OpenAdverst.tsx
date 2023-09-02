@@ -9,10 +9,19 @@ import { Description } from '../components/Description'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
+interface OpenAdverstType {
+    desc: string
+    address: string
+    image: string
+    phone: string
+    title: string
+    openCards: string | undefined
+    item: number
+    advertisementId: () => void
+}
 
 
-
-export const OpenAdverst = () => {
+export const OpenAdverst: React.FC<OpenAdverstType> = () => {
 
   const id = parseInt(useParams().id)
   const desc = useSelector((state) => state.openCards.desc)

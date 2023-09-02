@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettify": "prettier --write ./src",
-    "server": "nodemon server.js",
+    "server": "nodemon server.ts",
     "watch": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {
@@ -53,6 +53,7 @@
     "@types/node": "^20.5.7",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "@types/redux-logger": "^3.0.9",
     "prettier": "^3.0.1",
     "typescript": "^5.2.2"
   }

@@ -1,9 +1,16 @@
+import React from "react";
+
 const initialState = {
- sendDate: [],
+  sendDate: [],
   loading: false,
 }
 
-export const sendDataReducer = (state = initialState, action) => {
+interface SendDataType {
+  sendDate: string | any[]
+  loading:  boolean,
+}
+
+export const sendDataReducer: React.FC<SendDataType> = (state = initialState, action) => {
   switch (action.type) {
 
     case 'send/data/start':

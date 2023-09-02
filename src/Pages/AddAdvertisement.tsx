@@ -4,8 +4,14 @@ import { Button } from '../components/Button/Button'
 import { useDispatch } from 'react-redux'
 import { SendDate } from '../redux/SendDateReducer/action'
 
+interface AdvertisementType {
+    nameOfAdvertisement: () => void
+    image: string
+    desc: string
+    price: string
+}
 
-export const AddAdvertisement = (props) => {
+export const AddAdvertisement: React.FC<AdvertisementType> = () => {
 
   const [nameOfAdvertisement, setNameOfAdvertisement] = useState('');
   const [image, setImage] = useState('');
@@ -13,7 +19,7 @@ export const AddAdvertisement = (props) => {
   const [price, setPrice] = useState('');
   const dispatch = useDispatch()
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     dispatch(SendDate(nameOfAdvertisement, image, desc, price))
   }
 

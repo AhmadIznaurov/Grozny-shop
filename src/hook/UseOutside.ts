@@ -1,11 +1,11 @@
-import {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 
 export default function useOutsideAlerter(initialVisible) {
   const [isShow, setIsShow] = useState(initialVisible)
 
   const ref = useRef(null)
 
-  const handleClickOutside = (event) => {
+  const handleClickOutside: React.FC = (event) => {
     if(ref.current && !ref.current.contains(event.target)) {
       setIsShow(false)
     }

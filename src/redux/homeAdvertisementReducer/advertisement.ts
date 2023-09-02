@@ -1,9 +1,16 @@
+import React from "react";
+
 const initialState = {
   cards: [],
   loadingCards: false,
 }
 
-export const AdvertisementReducer = (state = initialState, action) => {
+interface cardsType {
+  cards: any[]
+  loadingCards: boolean
+}
+
+export const AdvertisementReducer: React.FC<cardsType> = (state = initialState, action) => {
   switch (action.type) {
 
     case 'load/cards/start':

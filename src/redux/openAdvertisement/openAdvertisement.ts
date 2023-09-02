@@ -1,3 +1,5 @@
+import React from "react";
+
 const initialState = {
   image: [],
   desc: [],
@@ -8,8 +10,17 @@ const initialState = {
   loading: false,
 }
 
+interface AdvertisementType {
+  image:    string | any[],
+  desc:     string | any[],
+  address:  string | any[],
+  phone:    string | any[],
+  title:    string | any[],
+  price:    string | any[],
+  loading:  boolean,
+}
 
-export const openAdvertisementReducer = (state = initialState, action) => {
+export const openAdvertisementReducer: React.FC<AdvertisementType> = (state = initialState, action) => {
   switch(action.type){
 
     case 'load/image/start':

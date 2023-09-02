@@ -1,9 +1,17 @@
+import React from "react";
+
 const initialState = {
   chats: [],
   loading: false,
 }
 
-export const chatsReducer = (state = initialState, action) => {
+interface chatsType {
+  chats: any[]
+  loading: boolean
+}
+
+
+export const chatsReducer: React.FC<chatsType> = (state = initialState, action) => {
   switch (action.type) {
 
     case 'load/chats/start':

@@ -1,4 +1,6 @@
-export const chats = () => {
+import React from "react";
+
+export const chats: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/chats/start'})
 

@@ -1,4 +1,6 @@
-export const loadLargeImage = () => {
+import React from "react";
+
+export const loadLargeImage: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/image/start'})
     fetch('http://localhost:8080/sliderImage')
@@ -12,7 +14,7 @@ export const loadLargeImage = () => {
   }
 }
 
-export const loadAddress = () => {
+export const loadAddress: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/address/start'})
     fetch('http://localhost:8080/addresses')
@@ -26,7 +28,7 @@ export const loadAddress = () => {
   }
 }
 
-export const loadPhone = () => {
+export const loadPhone: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/phone/start'})
     fetch('http://localhost:8080/phone')
@@ -40,7 +42,7 @@ export const loadPhone = () => {
   }
 }
 
-export const loadDesc = () => {
+export const loadDesc: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/desc/start'})
     fetch('http://localhost:8080/descriptionAdvertisement')
@@ -54,7 +56,7 @@ export const loadDesc = () => {
   }
 }
 
-export const loadTitle = () => {
+export const loadTitle: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/title/start'})
     fetch('http://localhost:8080/title')
@@ -68,7 +70,7 @@ export const loadTitle = () => {
   }
 }
 
-export const loadPrice = () => {
+export const loadPrice: React.FC = () => {
   return (dispatch) => {
     dispatch({type: 'load/price/start'})
     fetch('http://localhost:8080/price')
