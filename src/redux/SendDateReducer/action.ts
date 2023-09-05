@@ -13,7 +13,7 @@ interface SendDateType {
 export const SendDate: React.FC<SendDateType> = ({nameOfAdvertisement, image, desc, price}) => {
   return async (dispatch: any) => {
     dispatch({type: 'send/data/start'})
-    await fetch(`${serverUrl}/advertisement/`, {
+    await fetch(`${serverUrl}/advertisement`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
