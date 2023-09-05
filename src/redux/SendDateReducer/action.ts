@@ -1,4 +1,6 @@
 import React from "react";
+import { serverUrl } from '../../serverUrl';
+
 
 
 interface SendDateType {
@@ -9,13 +11,12 @@ interface SendDateType {
 }
 
 export const SendDate: React.FC<SendDateType> = ({nameOfAdvertisement, image, desc, price}) => {
-  return (dispatch: any) => {
+  return async (dispatch: any) => {
     dispatch({type: 'send/data/start'})
-
-    fetch('http://localhost:8080/advertisement', {
+    await fetch(`${serverUrl}/advertisement`, {
       method: 'POST',
       headers: {
-        "Content-Type":  "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         title: nameOfAdvertisement,
@@ -25,12 +26,12 @@ export const SendDate: React.FC<SendDateType> = ({nameOfAdvertisement, image, de
         location: 'Грозный'
       })
     })
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch({
-          type: 'send/data/success',
-          payload: data
+        .then((response) => response.json())
+        .then((data) => {
+          dispatch({
+            type: 'send/data/success',
+            payload: data
+          })
         })
-      })
   }
 }

@@ -28,7 +28,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettify": "prettier --write ./src",
-    "server": "nodemon server.ts",
+    "server": "nodemon server.js",
     "watch": "json-server --watch db.json --port 8080"
   },
   "eslintConfig": {

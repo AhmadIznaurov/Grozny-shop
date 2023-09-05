@@ -1,16 +1,19 @@
 import React from "react";
+import { serverUrl } from '../../serverUrl';
+
+
 
 export const chats: React.FC = () => {
-  return (dispatch) => {
-    dispatch({type: 'load/chats/start'})
+  return async (dispatch) => {
+      dispatch({type: 'load/chats/start'})
 
-    fetch('http://localhost:8080/chats')
-      .then((response) => response.json())
-      .then((data) => {
-        dispatch({
-          type: 'load/chats/success',
-          payload: data
-        })
-      })
+      await fetch(`${serverUrl}/chats`)
+          .then((response) => response.json())
+          .then((data) => {
+              dispatch({
+                  type: 'load/chats/success',
+                  payload: data
+              })
+          })
   }
 }

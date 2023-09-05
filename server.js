@@ -4,11 +4,6 @@ const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 
 
-interface serverType {
-  router: () => void
-  middlewares: () => void
-  defaults:  () => void | number
-}
 
 
 
